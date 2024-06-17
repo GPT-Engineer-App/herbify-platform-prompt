@@ -1,7 +1,7 @@
 import { Container, Text, VStack, Button } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
 import BulkUpload from "../components/BulkUpload";
-import ExportData from "../components/ExportData";
+
 import Dashboard from "../components/Dashboard";
 
 const Index = () => {
@@ -14,7 +14,7 @@ const Index = () => {
         <Text>Manage your herbs efficiently and effectively.</Text>
         <Button colorScheme="teal" onClick={() => navigate('/herbs')}>Browse Herbs</Button>
         <BulkUpload />
-        <ExportData data={herbs} />
+        
         <Dashboard inventory={100} sales={50} userInteractions={200} />
       </VStack>
     </Container>
