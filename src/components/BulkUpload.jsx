@@ -29,7 +29,14 @@ const BulkUpload = () => {
       const worksheet = workbook.Sheets[sheetName];
       const json = XLSX.utils.sheet_to_json(worksheet);
       console.log(json);
-      // TODO: Send JSON data to the server
+      // Simulate sending JSON data to the server
+      toast({
+        title: "File uploaded successfully.",
+        description: "Check the console for the parsed data.",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
     };
     reader.readAsArrayBuffer(file);
   };
