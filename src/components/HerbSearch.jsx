@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
 import { Box, Input, Button, VStack, Select, Checkbox, CheckboxGroup, Stack } from '@chakra-ui/react';
 
 const HerbSearch = ({ onSearch }) => {
