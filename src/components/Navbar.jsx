@@ -13,6 +13,12 @@ const Navbar = () => (
       <Link as={RouterLink} to="/contact" color="white" fontSize="lg" fontWeight="bold">
         Contact
       </Link>
+      <Link as={RouterLink} to="/login" color="white" fontSize="lg" fontWeight="bold">
+        Login
+      </Link>
+      <Link as={RouterLink} to="/dashboard" color="white" fontSize="lg" fontWeight="bold">
+        Dashboard
+      </Link>
     </Flex>
   </Box>
 );
