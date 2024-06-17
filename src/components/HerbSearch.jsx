@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Input, Button, VStack, Select, Checkbox, CheckboxGroup, Stack } from '@chakra-ui/react';
-import { SearchIcon } from '@chakra-ui/icons';
+import { FaSearch } from 'react-icons/fa';
 
 const HerbSearch = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
