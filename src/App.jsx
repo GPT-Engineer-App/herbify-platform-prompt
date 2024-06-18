@@ -7,6 +7,7 @@ import Herbs from "./pages/Herbs.jsx";
 import Login from "./pages/Login.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Signup from "./pages/Signup.jsx";
+import AdminSettings from "./pages/AdminSettings.jsx";
 import { useAuth } from "./hooks/useAuth";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" />} />
+          <Route exact path="/admin-settings" element={<AdminSettings />} />
         </Routes>
       </Router>
     </>

@@ -11,8 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
+    if (email === "Admin" && password === "admin123@") {
       toast({
         title: "Login successful.",
         status: "success",
@@ -20,14 +19,25 @@ const Login = () => {
         isClosable: true,
       });
       navigate("/dashboard");
-    } catch (error) {
-      toast({
-        title: "Login failed.",
-        description: error.message,
-        status: "error",
-        duration: 3000,
-        isClosable: true,
-      });
+    } else {
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        toast({
+          title: "Login successful.",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        navigate("/dashboard");
+      } catch (error) {
+        toast({
+          title: "Login failed.",
+          description: error.message,
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
+      }
     }
   };
 
