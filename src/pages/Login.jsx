@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Box, Button, Input, VStack, Heading, Text, useToast } from "@chakra-ui/react";
+import { Box, Button, Input, VStack, Heading, Text, useToast, Link } from "@chakra-ui/react";
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
 import { auth } from "../firebaseConfig";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link as RouterLink } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -99,6 +99,12 @@ const Login = () => {
         <Button colorScheme="facebook" onClick={handleFacebookLogin}>
           Login with Facebook
         </Button>
+        <Text>
+          Don't have an account?{" "}
+          <Link as={RouterLink} to="/signup" color="teal.500">
+            Sign Up
+          </Link>
+        </Text>
       </VStack>
     </Box>
   );
