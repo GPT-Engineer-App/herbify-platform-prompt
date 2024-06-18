@@ -22,6 +22,9 @@ const Navbar = () => {
         <Link as={RouterLink} to="/dashboard" color="white" fontSize="lg" fontWeight="bold">
           Dashboard
         </Link>
+        <Link as={RouterLink} to="/admin-settings" color="white" fontSize="lg" fontWeight="bold">
+          Admin Settings
+        </Link>
       </Flex>
     </Box>
   );
